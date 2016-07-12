@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 
-# example of the run script for running the rolling_median calculation with a python file, 
-# but could be replaced with similar files from any major language
+# Calls run.jar passing in the input and output parameters
+#
+# Example:
+#
+# Notes: The jar was build using jdk 1.8
+# If an earlier version of the jdk is needed you will need to:
+# 1) Edit pom.xml so that <source>1.8</source> and <target>1.8</target> are updated
+# 2) Ensure maven in installed and run mvn clean install
+# 3) Ensure the build ran fin and that ./run.jar is updated
+ 
 
-# I'll execute my programs, with the input directory venmo_input and output the files in the directory venmo_output
-python ./src/rolling_median.py ./venmo_input/venmo-trans.txt ./venmo_output/output.txt
+java -jar src/run.jar ./venmo_input/venmo-trans.txt ./venmo_output/output.txt
+
+
 
 
 

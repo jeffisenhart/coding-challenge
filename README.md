@@ -1,3 +1,49 @@
+# Dependencies
+
+The solution for this challenge was written in java and tested using 1.8.0_51-b16, hence jdk 1.8 is required to execute ./run.sh
+
+Libraries and tools used to help accomplish goal:
+
+1. Java (jdk 1.8) - https://www.java.com/en/
+2. Eclipse - https://eclipse.org/
+3. Faster Jackson (for json processing) - https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+4. Maven (for building and managing dependencies) - https://maven.apache.org/
+5. JUnit (for testing)  - https://mvnrepository.com/artifact/junit/junit 
+
+## If an earlier version of the jdk is needed you will need to (Buyer beware - untested!!!):
+
+1. Edit pom.xml so that <source>1.8</source> and <target>1.8</target> reflect the jdk you need (most likely 1.7 is the only one that could work)
+2. Ensure maven in installed and run mvn clean install in director where pom.xml resides
+3. Ensure the build ran fine and that src/run.jar is updated
+
+# Source
+
+Source code is under the /src/main/java directory and junit testing code is under /src/test/java. To run test, from directory containing pom.xml (and assuming maven is installed) run 
+mvn test
+
+Output of test example:
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running insight.data.science.challenge.GraphTest
+[record ignored] Invalid Payment object: actor: Actor, target: null, creationTime: Tue Jul 12 12:29:29 PDT 2016, missing actor, target or creation time
+[record ignored] Invalid Payment object: actor: Actor, target: Target, creationTime: null, missing actor, target or creation time
+[record ignored] Invalid Payment object: actor: null, target: Target, creationTime: Tue Jul 12 12:29:29 PDT 2016, missing actor, target or creation time
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 sec
+
+Results :
+
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.054 s
+[INFO] Finished at: 2016-07-12T12:29:29-07:00
+[INFO] Final Memory: 11M/309M
+[INFO] ------------------------------------------------------------------------
+
 # Table of Contents
 
 1. [Challenge Summary] (README.md#challenge-summary)
